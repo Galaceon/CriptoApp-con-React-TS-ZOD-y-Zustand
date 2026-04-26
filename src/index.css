@@ -1,7 +1,7 @@
 :root {
-    --white: #FFF
-    --primary: #61ecbc
-    --black: #182338
+    --white: #FFF;
+    --primary: #61ecbc;
+    --black: #182338;
 }
 
 html {
@@ -15,4 +15,28 @@ body {
     background-size: cover;
     min-height: 100vh;
     font-family: "Outfit", sans-serif;
+}
+.container {
+	max-width: 60rem;
+	width: 95%;
+	margin: 0 auto;
+}
+.app-title {
+    font-size: 3.8rem;
+    margin-top: 5rem;
+    color: var(--white);
+    line-height: 1;
+}
+.app-title span {
+    display: block;
+    color: var(--primary);
+    font-size: 4.4rem;
+}
+
+.content {
+    margin-top: 5rem;
+    padding: 6rem 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
