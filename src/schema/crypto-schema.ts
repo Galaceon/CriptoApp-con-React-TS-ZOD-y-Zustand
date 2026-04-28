@@ -1,5 +1,6 @@
 import { z } from 'zod'
 
+// Schema de monedas normales (EUR, USD, MXN)
 export const CurrencySchema = z.object({
     code: z.string(),
     name: z.string()
@@ -15,3 +16,8 @@ export const CryptoCurrencyResponseSchema = z.object({
 
 // Schema plural, ya que es un array que contendra muchos objetos
 export const CryptoCurrenciesResponseSchema = z.array(CryptoCurrencyResponseSchema)
+
+export const PairSchema = z.object({
+    currency: z.string(),
+    criptocurrency: z.string()
+})
