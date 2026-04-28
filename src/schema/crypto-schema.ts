@@ -5,6 +5,7 @@ export const CurrencySchema = z.object({
     name: z.string()
 })
 
+// Schema singular, se refiere a la forma de un objeto
 export const CryptoCurrencyResponseSchema = z.object({
     CoinInfo : z.object({
         FullName: z.string(),
@@ -12,4 +13,5 @@ export const CryptoCurrencyResponseSchema = z.object({
     })
 })
 
+// Schema plural, ya que es un array que contendra muchos objetos
 export const CryptoCurrenciesResponseSchema = z.array(CryptoCurrencyResponseSchema)
