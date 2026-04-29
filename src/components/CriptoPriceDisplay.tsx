@@ -7,14 +7,22 @@ export default function CriptoPriceDisplay() {
     const hasResult = useMemo(() => !Object.values(result). includes(''), [result])
 
     return (
-        <div>
+        <div className="result-wrapper">
             {hasResult && (
                 <>
                     <h2>Cotización</h2>
-                    <div>
+                    <div className="result">
+                        <img 
+                            src={`https://www.cryptocompare.com${result.IMAGEURL}`}
+                            alt="Imagen Criptomoneda"
+                        />
 
                         <div>
                             <p>El precio es de: <span>{result.PRICE}</span></p>
+                            <p>El precio mas alto del día: <span>{result.HIGHDAY}</span></p>
+                            <p>El precio mas bajo del día: <span>{result.LOWDAY}</span></p>
+                            <p>Variación últimas 24 horas <span>{result.CHANGE24HOUR}</span></p>
+                            <p>Última actualización: <span>{result.LASTUPDATE}</span></p>
                         </div>
                     </div>
                 </>
